@@ -1,0 +1,24 @@
+<div class="newContainer">
+        <div class="centrar">
+            <ul class="lista">
+                <li><h1>Configuración</h1></li>
+                <!--<li><img class="imagen" src="../assets/cargandoSinFondo.png"></li>-->
+            </ul>
+        </div>
+
+    <form class="formulario" id="formulario" [formGroup]="formulario" > 
+        <div class="form-group">
+            
+            <label class="form-label" for="aforo">Aforo permitido en la oficina: </label>
+            <br>
+            <input [(ngModel)]="maxAforo" type="number" id="aforo" min="10" max="300" formControlName="nuevoMax">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            &nbsp;&nbsp; 
+            <button (click)="modificar()" type="button" class="btn btn-success">Cambiar</button>
+ 
+        </div>   
+    
+
+        <div class="linkRegistro"><a>Registrar nuevo integrante de #TeamTactech</a></div>
+        <!--[routerLink]="['/registro']" routerLinkActive="router-link-active" class="link"]-->
+    </form>
+</div>

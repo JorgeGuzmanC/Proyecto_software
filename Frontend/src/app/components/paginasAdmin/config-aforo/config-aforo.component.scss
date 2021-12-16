@@ -1,0 +1,45 @@
+.newContainer{
+    background-color: #6F45B8;
+    margin:0%;
+    padding:0%;
+    text-align: center;
+    height: calc(100vh - 80px - 40px);
+}
+
+.centrar{
+    padding:10%;
+    text-align:center;
+}
+
+.lista{
+    list-style: none;
+}
+
+.lista li{
+    display: inline-block;
+    color:white;
+}
+
+
+label{
+    color:white;
+}
+
+.linkRegistro{
+    margin-top: 5%;
+}
+
+.imagen{
+    width: 50px;
+    height: 50px;
+}
+
+.button{
+    border: 1px solid #72E6AD;
+}
+
+.button:hover{
+    background-color: #72E6AD;
+    color:black;
+}
+

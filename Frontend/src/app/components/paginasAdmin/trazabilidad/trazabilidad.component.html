@@ -1,0 +1,40 @@
+<div class="newContainer">
+    <div class="container">
+        <br>
+        <h1>Trazabilidad</h1> 
+        <br>
+        <form class="formulario" id="formulario" [formGroup]="formulario" (ngSubmit)="traza($event)">
+            <br>
+            <label class="fecha" for="rut">Ingrese rut:</label>
+            &nbsp;&nbsp;<input type="text" id="rut" formControlName="rut" placeholder="12345678-9">
+        
+            <br>
+            <button type="submit" [disabled]="formulario.invalid">Realizar Trazabilidad</button>
+        </form>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Rut</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Apellido</th>
+                    <th scope="col">Fecha</th>
+                    <th scope="col">Hora Entrada</th>
+                    <th scope="col">Hora Salida</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr *ngFor="let user of ListaTrazado">
+
+                    <th>{{user.rut}}</th>
+                    <td>{{user.nombre}}</td>
+                    <td>{{user.apellido}}</td>
+                    <td>{{user.fecha}}</td>
+                    <td>{{user.horaE}}</td>
+                    <td>{{user.horaS}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

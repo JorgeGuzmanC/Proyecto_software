@@ -1,0 +1,39 @@
+<div class="newContainer">
+<div class="container"> 
+    <h1>Editar Usuario</h1>
+    <div class="row">
+        <div class="col-sm-6">
+            <form class="formulario" id="formulario" [formGroup]="formulario">
+                <div class="mb3">
+                    <label class="form-label">Nombre</label>
+                    <input [(ngModel)]="usuario.nombre" type="text" class="form-control" name="nombre" formControlName="nombre">
+                </div>
+                <div class="mb3">
+                    <label class="form-label">Apellido</label>
+                    <input [(ngModel)]="usuario.apellido" type="text" class="form-control" name="apellido" formControlName="apellido">
+                </div>
+                <div class="mb3">
+                    <label class="form-label">Email</label>
+                        <input [(ngModel)]="usuario.email" type="text" class="form-control" name="email" formControlName="email">
+                    </div>
+                    <div class="mb3">
+                        <label class="form-label">Telefono</label>
+                        <input [(ngModel)]="usuario.telefono" type="text" class="form-control" name="telefono" formControlName="telefono">
+                    </div>
+                    <div class="mb3">
+                        <label class="form-label">Cargo</label>
+                        <input [(ngModel)]="usuario.cargo" type="text" class="form-control" name="cargo" formControlName="cargo">
+                    </div>
+                    <br>
+                    <div class="boton">
+                        <button (click)="modificar()" class="btn btn-primary" >Guardar</button>
+                    </div>    
+                </form>
+        </div>
+        
+    </div>
+
+
+
+</div>
+</div>

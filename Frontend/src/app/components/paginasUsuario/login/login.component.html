@@ -1,0 +1,23 @@
+<div class=col-xs-12 col-sm-12 col-md-8 col-lg-12 class="position">
+    
+        <h1 class="titulo">Iniciar Sesión</h1>
+        <img id="imagen" src="">
+        
+        <div>
+            <div>
+                <form class="formulario" id="formulario" [formGroup]="formulario">
+                    <div class="form-group">
+                        <label class="form-label" class="texto">Rut</label>
+                        <input [(ngModel)]="rut" type="text" class="form-control" name="rut" formControlName="rut">
+                    </div><br>
+                    <div class="form-group">
+                        <label class="form-label" class="texto">Contraseña</label>
+                        <input [(ngModel)]="pass" type="password" class="form-control" name="nombre" formControlName="nombre">
+                    </div>
+
+                    <button (click)="iniciar()" class="btn btn-primary" [disabled]="formulario.invalid">Enviar</button>
+                </form>
+            </div>
+        </div>
+   
+</div>

@@ -1,0 +1,42 @@
+
+.newContainer{
+    padding-top:50px;
+    width:100%;
+    background-color: #6F45B8;
+    text-align: center;
+    height: calc(100vh - 80px - 40px);
+}
+
+/*.container{
+    padding-top: 50px;
+    margin-bottom: 167px;
+    text-align: center;
+    padding: 0%;
+    margin:0%;
+    width:100%;
+    background-color: #6F45B8;
+}*/
+
+
+h1{
+    color:white;
+}
+p{
+    color:white;
+}
+select{
+    background-color: white;
+}
+select option{ 
+    background-color: white;
+}
+
+ .btn{
+    border: 1px solid #72E6AD;
+    background-color: none;
+}
+
+.btn:hover{
+    background-color: #72E6AD;
+    color: black;
+}

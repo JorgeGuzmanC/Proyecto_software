@@ -1,0 +1,43 @@
+input{
+    border: 1px solid #72E6AD;
+    border-radius: 10px;
+}
+
+.newContainer{
+    background-color: #6F45B8;
+    border: 1px solid #6F45B8;
+}
+    
+
+.container{
+    padding-top: 50px;
+    margin-bottom: 224px;
+    //height: calc(100vh - 80px - 40px);
+}
+
+.fecha{
+    margin-bottom: 20px;
+    color:white;
+}
+
+button{
+    border: 1px solid #72E6AD;
+    font-weight:bold;
+    border-radius: 50px;
+    color:white;
+    background-color: #6F45B8;
+}
+
+button:hover{
+    background-color: #72E6AD;
+    color:white;
+    font-weight: bold;
+}
+
+h1{
+    color:white;
+}
+
+table{
+    color:white;
+}

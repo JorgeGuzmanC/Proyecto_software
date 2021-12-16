@@ -1,0 +1,31 @@
+.newContainer{
+    border: 1px solid #6F45B8;
+    background-color: #6F45B8;
+}
+
+.container{
+    height: calc(100vh - 80px - 40px);
+}
+
+h1{
+    color:white;
+}
+
+.col-sm-6{
+    color:white;
+}
+
+
+.boton{
+    text-align: center;
+}
+
+button{
+    border: 1px solid #72E6AD;
+    background-color: #6F45B8;
+}
+
+button:hover{
+    border:1px solid #72E6AD;
+    background-color: #47df95;
+}

@@ -1,0 +1,63 @@
+<!-- Barra principal -->
+<div class="contenedor" *ngIf="validar() === false && validarAdmin() === false">  
+    <a [routerLink]="['']" routerLinkActive="router-link-active" class="link"><img src="../../../assets/Logo.PNG"></a>  
+    <nav class="navegador">
+        <ul>
+            <li *ngIf="validar()===false">
+                <a class="link" [routerLink]="['/iniciarSesion']" routerLinkActive="router-link-active">Iniciar sesión</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<!-- Barra usuarios -->
+<div class="contenedor" *ngIf="validarUsuario() === true">  
+    <a [routerLink]="['']" routerLinkActive="router-link-active" class="link"><img src="../../../assets/Logo.PNG"></a>  
+    <nav class="navegador">
+        <ul>
+            <li>
+                <a class="link" [routerLink]="['/verAforo']" routerLinkActive="router-link-active">Aforo en tiempo real</a>
+            </li>
+            <li>
+                <a class="link" [routerLink]="['/reservar']" routerLinkActive="router-link-active">Reservar</a>
+            </li>
+            
+            <li>
+                <a class="link" [routerLink]="['/escanearS']" routerLinkActive="router-link-active">Salir de oficina</a>
+            </li>
+            <li>
+                <a class="link" [routerLink]="['/trazabilidad']" routerLinkActive="router-link-active">Trazabilidad</a>
+            </li>
+            <li>
+                <a class="link" (click)="cerrarSesion() ">Cerrar sesión</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>
+
+
+<!-- Barra administrador -->
+<div class="contenedor" *ngIf="validarAdmin() === true">  
+    <a [routerLink]="['']" routerLinkActive="router-link-active" class="link"><img src="../../../assets/Logo.PNG"></a>  
+    <nav class="navegador">
+        <ul>
+            <li >
+                <a class="link" [routerLink]="['/registro']" routerLinkActive="router-link-active">Registro</a>
+            </li>
+            <li >
+                <a class="link" [routerLink]="['/verAforo']" routerLinkActive="router-link-active">Ver aforo</a>
+            </li>
+            <li >
+                <a class="link" [routerLink]="['/escanearS']" routerLinkActive="router-link-active">Salir de oficina</a>
+            </li>
+            <li >
+                <a class="link" [routerLink]="['/trazabilidad']" routerLinkActive="router-link-active">Trazabilidad</a>
+            </li>
+            <li >
+                <a class="link" (click)="cerrarSesion()">Cerrar sesión</a>
+            </li>
+            
+        </ul>
+    </nav>
+</div>

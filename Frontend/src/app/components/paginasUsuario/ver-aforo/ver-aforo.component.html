@@ -1,0 +1,26 @@
+<div class="container">
+    <h1>Aforo en oficina</h1>
+    <p>fecha: {{fecha}}</p>
+    <p>cupo: {{cupo}}</p>
+    <table class="table">
+        <thead>
+            <tr> 
+                <th scope="col">Rut</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">Hora Entrada</th>
+            </tr>
+        </thead>
+        <tbody>
+
+            <tr *ngFor="let user of ListaAforo  ">
+
+                <th>{{user.rut}}</th>
+                <td>{{user.nombre}}</td>
+                <td>{{user.apellido}}</td>
+                <td>{{user.horaE}}</td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
