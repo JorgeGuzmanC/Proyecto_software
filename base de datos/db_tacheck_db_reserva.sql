@@ -1,0 +1,56 @@
+-- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
+--
+-- Host: 127.0.0.1    Database: db_tacheck
+-- ------------------------------------------------------
+-- Server version	8.0.27
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!50503 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `db_reserva`
+--
+
+DROP TABLE IF EXISTS `db_reserva`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!50503 SET character_set_client = utf8mb4 */;
+CREATE TABLE `db_reserva` (
+  `id` int NOT NULL AUTO_INCREMENT,
+  `rut` varchar(45) NOT NULL,
+  `fecha` varchar(45) NOT NULL,
+  `horaE` varchar(45) NOT NULL,
+  `horaS` varchar(45) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `rut_fk_idx` (`rut`),
+  CONSTRAINT `rut_fk` FOREIGN KEY (`rut`) REFERENCES `db_usuarios` (`rut`) ON DELETE CASCADE
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `db_reserva`
+--
+
+LOCK TABLES `db_reserva` WRITE;
+/*!40000 ALTER TABLE `db_reserva` DISABLE KEYS */;
+INSERT INTO `db_reserva` VALUES (2,'20468825-7','19-11-2021','08:00','12:00'),(4,'20133394-6','19-11-2021','12:00','19:00'),(5,'20468825-7','2-12-2021','',''),(6,'20468825-7','2-12-2021','',''),(7,'20468825-7','2-12-2021','',''),(8,'19488487-7','2-12-2021','16:15','19:45'),(13,'19403620-5','2-12-2021','11:45','09:15'),(14,'20004006-6','2-12-2021','11:00','17:00'),(15,'19403620-5','3-12-2021','12:15','19:15');
+/*!40000 ALTER TABLE `db_reserva` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2021-12-15 22:17:14
